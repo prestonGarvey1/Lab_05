@@ -8,29 +8,28 @@ public class ShipCostCalculator {
         Scanner scan = new Scanner(System.in);
 
         //Create values
-        double itemPrice;
+        double itemPrice = 0;
         double taxRate;
         double finalTax;
         double finalPrice;
 
-        while (true) {
-            System.out.println("Please enter the price of your item.");
-            if (scan.hasNextDouble()) {
-                itemPrice = scan.nextDouble();
+        if (scan.hasNextDouble()) {
+            itemPrice = scan.nextDouble();
 
             // Check if the value is under 1.
-                if (itemPrice > 1) {
-                    System.out.println("test");
-                }
-                else {
-                 System.out.println("You have entered an incorrect number");
-                }
+            if (itemPrice > 1) {
+                System.out.println("test");
+            } else {
+                System.out.println("You have entered an incorrect number");
             }
-            else{
-                System.out.println("You have entered an incorrect value");
-            }
-            if(itemPrice > 100){
+        }
+        else{
+            System.out.println("You have entered an incorrect value");
+        }
+        if(itemPrice > 100){
+        System.out.println("Your Number is higher than 100, free shipping is not available.");
 
         }
+
     }
 }
